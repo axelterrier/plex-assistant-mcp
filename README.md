@@ -106,7 +106,7 @@ Add the following MCP server configuration:
         "src/plex_assistant_mcp/main.py"
       ],
       "env": {
-        "PLEX_URL": "http://192.168.1.100:32400",
+        "PLEX_URL": "http://localhost:32400",
         "PLEX_TOKEN": "your-actual-token-here"
       }
     }
