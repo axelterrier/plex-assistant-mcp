@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "plex-assistant-mcp"
+version = "1.0.0"
+description = "MCP server for managing your Plex library through AI assistants like Claude"
+readme = "README.md"
+license = "MIT"
+authors = [
+    { name = "Plex Assistant", email = "assistant@plex.local" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "mcp>=0.1.0",
+    "plexapi>=4.15.0",
+    "python-dotenv>=1.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/plex-assistant-mcp"
+Repository = "https://github.com/yourusername/plex-assistant-mcp"
+Issues = "https://github.com/yourusername/plex-assistant-mcp/issues"
+
+[project.scripts]
+plex-assistant = "plex_assistant_mcp.main:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/plex_assistant_mcp"]
